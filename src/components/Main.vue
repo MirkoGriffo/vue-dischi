@@ -1,5 +1,6 @@
 <template>
   <main>
+    <div><Select /></div>
     <div v-for="album in albumList" :key="album.id">
       <Album :info="album" />
     </div>
@@ -9,10 +10,12 @@
 <script>
 import axios from "axios";
 import Album from "@/components/Album.vue";
+import Select from "@/components/Select.vue";
 export default {
   name: "Main",
   components: {
     Album,
+    Select,
   },
   data() {
     return {

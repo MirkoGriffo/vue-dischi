@@ -1,10 +1,12 @@
 <template>
   <div class="album-card">
     <img :src="info.poster" :alt="info.title" />
-    <h3 class="white">{{ info.title }}</h3>
-    <p>{{ info.author }}</p>
-    <p>{{ info.year }}</p>
-    <p class="white">{{ info.genre }}</p>
+    <div class="text">
+      <h3 class="white">{{ info.title }}</h3>
+      <p>{{ info.author }}</p>
+      <p>{{ info.year }}</p>
+      <p class="white">{{ info.genre }}</p>
+    </div>
   </div>
 </template>
 
@@ -16,12 +18,19 @@ export default {
 </script>
 
 <style scoped>
+* {
+  font-family: sans-serif;
+}
 .album-card {
-  height: 400px;
+  height: 370px;
   width: 200px;
   background-color: #2e3a46;
   margin: 12px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 img {
   width: 80%;
